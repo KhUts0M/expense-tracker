@@ -40,7 +40,6 @@ const App = () => {
     const checked = e.target.checked;
     setSelectAll(checked);
 
-    // Update the checked state for all expenses
     setExpenses(expenses.map((expense) => ({ ...expense, checked })));
   };
 
