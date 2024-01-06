@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./App.css"; // Import your CSS file
+import "./App.css";
 
 const App = () => {
   const [expenses, setExpenses] = useState([]);
@@ -71,17 +71,18 @@ const App = () => {
           name="name"
         />
         <input
-          type="date"
-          className="expenseDate"
-          placeholder="dd-mm-yyyy"
-          name="date"
-        />
-        <input
           type="number"
           className="amount"
           placeholder="Enter Amount"
           name="expense"
         />
+        <input
+          type="date"
+          className="expenseDate"
+          placeholder="dd-mm-yyyy"
+          name="date"
+        />
+
         <input type="submit" id="submitbtn" name="submit" value="Submit" />
       </form>
       <div className="row">
@@ -105,7 +106,7 @@ const App = () => {
           <input
             type="text"
             name="search"
-            placeholder="Search Name.."
+            placeholder="Search Name..."
             className="searchName"
             onChange={handleSearchChange}
           />
@@ -133,7 +134,7 @@ const App = () => {
                   <label htmlFor={`label-${expense.id}`}></label>
                 </td>
                 <td>{expense.name}</td>
-                <td>${expense.amount}</td>
+                <td>R{expense.amount}</td>
                 <td>{expense.date}</td>
                 <td>
                   <button
